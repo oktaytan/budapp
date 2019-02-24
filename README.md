@@ -1,3 +1,3 @@
 # budapp
 
-# Basit bir gelir-gider hesaplama aracı
+## Basit bir gelir-gider hesaplama aracı
