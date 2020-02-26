@@ -3,318 +3,316 @@
 @import 'colors';
 
 @function trans($arg) {
-  @return $arg 0.2s ease;
+	@return $arg 0.2s ease;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ebebeb;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Montserrat', sans-serif;
+	background-color: #ebebeb;
 }
 
 .container {
-  width: 24rem;
-  min-height: 50.75rem;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
-  background-color: $bg_color;
+	width: 24rem;
+	min-height: 50.75rem;
+	box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+	background-color: $bg_color;
 }
 
 // HEADER
 .header {
-  width: 100%;
-  min-height: 6.8rem;
-  background: url('../img/header-bg.png') no-repeat 0 0 /cover;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+	width: 100%;
+	min-height: 6.8rem;
+	background: url('../img/header-bg.png') no-repeat 0 0 / cover;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
 
-  a {
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: $color_7;
-    margin-top: 1rem;
-  }
+	a {
+		text-decoration: none;
+		font-size: 1.25rem;
+		font-weight: 700;
+		color: $color_7;
+		margin-top: 2rem;
+	}
 }
 
 // Content
 .content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
 }
 
 .content__half {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .budget__init {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3.75rem;
-  transition: trans(transform);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.75rem;
+	transition: trans(transform);
 
-  &.show {
-    transform: translateY(2.5rem);
-  }
+	&.show {
+		transform: translateY(2.5rem);
+	}
 
-  h3 {
-    font-size: 0.875rem;
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    color: $color_6;
-    margin-bottom: 0.875rem;
-  }
-
+	h3 {
+		font-size: 0.875rem;
+		font-weight: 700;
+		margin: 0;
+		padding: 0;
+		color: $color_6;
+		margin-bottom: 0.875rem;
+	}
 }
 
 .budget__form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .budget__input {
-  width: 20.375rem;
-  height: 2.1875rem;
-  border-radius: 1.5rem;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  border: 1px solid $color_1;
-  padding: 0 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: $color_8;
+	width: 20.375rem;
+	height: 2.1875rem;
+	border-radius: 1.5rem;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	border: 1px solid $color_1;
+	padding: 0 1rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: $color_8;
 }
 
 .hesapla {
-  background: none;
-  border: none;
-  outline: none;
-  font-size: 0.875rem;
-  font-weight: 600;
-  border: 1px solid $color_1;
-  width: 6rem;
-  height: 2rem;
-  border-radius: 1rem;
-  color: $color_8;
-  cursor: pointer;
-  transition: trans(all);
+	background: none;
+	border: none;
+	outline: none;
+	font-size: 0.875rem;
+	font-weight: 600;
+	border: 1px solid $color_1;
+	width: 6rem;
+	height: 2rem;
+	border-radius: 1rem;
+	color: $color_8;
+	cursor: pointer;
+	transition: trans(all);
 
-  &:hover {
-    background-color: $color_1;
-    color: $color_7;
-  }
+	&:hover {
+		background-color: $color_1;
+		color: $color_7;
+	}
 }
 
 .budget__feedback,
 .gider__feedback {
-  background-color: rgba($color_3, 0.6);
-  width: 21rem;
-  font-size: 0.8rem;
-  line-height: 1.1rem;
-  text-align: center;
-  padding: 1rem 0.1rem;
-  border-radius: 0.4rem;
-  border: 1px solid $color_3;
-  color: darken($color_3, 30);
-  position: absolute;
-  top: 16%;
-  left: -50%;
-  transform: translateX(-50%);
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
-  transition: trans(left);
-  transition-duration: 0.3s;
+	background-color: rgba($color_3, 0.6);
+	width: 21rem;
+	font-size: 0.8rem;
+	line-height: 1.1rem;
+	text-align: center;
+	padding: 1rem 0.1rem;
+	border-radius: 0.4rem;
+	border: 1px solid $color_3;
+	color: darken($color_3, 30);
+	position: absolute;
+	top: 16%;
+	left: -50%;
+	transform: translateX(-50%);
+	box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+	transition: trans(left);
+	transition-duration: 0.3s;
 
-  &.show {
-    left: 50%;
-  }
+	&.show {
+		left: 50%;
+	}
 }
 
 .gider__feedback {
-  top: 53%;
+	top: 53%;
 }
 
 .budget__status {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3.75rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.75rem;
 }
 
 .statu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 
-  h4 {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: $color_6;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0.6rem;
-  }
+	h4 {
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: $color_6;
+		margin: 0;
+		padding: 0;
+		margin-bottom: 0.6rem;
+	}
 
-  img {
-    max-width: 100%;
-    margin-bottom: 0.6rem;
-  }
+	img {
+		max-width: 100%;
+		margin-bottom: 0.6rem;
+	}
 
-  span {
-    font-size: 1.375rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+	span {
+		font-size: 1.375rem;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 }
 
 #butce {
-  color: $color_2;
+	color: $color_2;
 }
 
 #giderler {
-  color: $color_3;
+	color: $color_3;
 }
 
 #kalan {
-  color: $color_1;
+	color: $color_1;
 }
 
 // Giderler__form
 .giderler__form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3.75rem;
-  transition: trans(transform);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.75rem;
+	transition: trans(transform);
 
-  &.show {
-    transform: translateY(2rem);
-  }
+	&.show {
+		transform: translateY(2rem);
+	}
 
-  label {
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: $color_6;
-    margin-bottom: 0.875rem;
-  }
+	label {
+		font-size: 0.875rem;
+		font-weight: 700;
+		color: $color_6;
+		margin-bottom: 0.875rem;
+	}
 
-  input {
-    @extend .budget__input;
-    border-color: $color_3;
-  }
+	input {
+		@extend .budget__input;
+		border-color: $color_3;
+	}
 }
 
 .gider__status {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .gider__list {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  width: 100%;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
 
-  .gider__list__header {
-    width: 100%;
-    margin-bottom: 0.875rem;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 0 1.5rem;
+	.gider__list__header {
+		width: 100%;
+		margin-bottom: 0.875rem;
+		display: flex;
+		justify-content: space-between;
+		text-align: center;
+		padding: 0 1.5rem;
 
-    span {
-      font-size: 0.75rem;
-      font-weight: 700;
-      color: $color_6;
+		span {
+			font-size: 0.75rem;
+			font-weight: 700;
+			color: $color_6;
 
-      &:nth-of-type(2) {
-        margin-left: 1rem;
-      }
-    }
-  }
+			&:nth-of-type(2) {
+				margin-left: 1rem;
+			}
+		}
+	}
 }
 
 .gider__content {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: 0 1.5rem;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding: 0 1.5rem;
 }
 
 .gider__adı {
-  width: 4rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-style: italic;
-  color: $color_3;
-  line-height: 1;
+	width: 4rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	font-style: italic;
+	color: $color_3;
+	line-height: 1;
 }
 
 .gider__tutarı {
-  width: 4rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  font-style: italic;
-  color: $color_3;
-  text-align: right;
+	width: 4rem;
+	font-size: 0.75rem;
+	font-weight: 600;
+	font-style: italic;
+	color: $color_3;
+	text-align: right;
 }
 
 .giderBtn {
-  @extend .hesapla;
-  border-color: $color_3;
-  width: 7rem;
+	@extend .hesapla;
+	border-color: $color_3;
+	width: 7rem;
 
-  &:hover {
-    background-color: $color_3;
-  }
+	&:hover {
+		background-color: $color_3;
+	}
 }
 
 button {
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
-
 
 // @media screen and (min-width: 1200px) {
 //   .container {
